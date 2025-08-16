@@ -6,7 +6,7 @@ import {vapi} from "@/lib/vapi.sdk";
 import Image from "next/image";
 import Lottie, {LottieRefCurrentProps} from "lottie-react";
 import soundwaves from '@/constants/soundwaves.json'
-// import {addToSessionHistory} from "@/lib/actions/companion.actions";
+import {addToSessionHistory} from "@/lib/actions/companion.action";
 
 enum CallStatus {
     INACTIVE = 'INACTIVE',
@@ -145,7 +145,7 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
             </section>
 
             <section className="transcript">
-                <div className="transcript-message no-scrollbar">
+                <div className="transcript-message">
                     {messages.map((message, index) => {
                         if(message.role === 'assistant') {
                             return (
@@ -153,7 +153,7 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                                     {
                                         name
                                             .split(' ')[0]
-                                            .replace('/[.,]/g, ','')
+                                            .replace(/[.,]/g, '')
                                     }: {message.content}
                                 </p>
                             )
