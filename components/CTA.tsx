@@ -23,7 +23,7 @@ const CTA = () => {
         className="cta-illustration"
       />
 
-      <button className='btn-primary'>
+      <button className='btn-primary bg-[#FE5933]'>
         <Image
         src={"icons/plus.svg"}
         alt="Plus Icon"
