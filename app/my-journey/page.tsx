@@ -13,6 +13,9 @@ import {
 import Image from "next/image";
 import CompanionList from "@/components/CompanionList";
 
+// Force dynamic rendering to prevent caching issues
+export const dynamic = 'force-dynamic'
+
 const Profile = async () => {
   const user = await currentUser();
 
