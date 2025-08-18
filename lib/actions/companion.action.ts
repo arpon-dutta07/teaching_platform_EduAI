@@ -110,7 +110,7 @@ export const newCompanionPermissions = async () => {
     const { userId, has } = await auth();
     const supabase = createSupabaseClient();
 
-    let limit = 0;
+    let limit = 3; // Default free tier limit
 
     if(has({ plan: 'pro' })) {
         return true;
