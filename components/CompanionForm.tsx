@@ -67,7 +67,7 @@ const CompanionForm = () => {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Companion name</FormLabel>
+                            <FormLabel className="text-white font-bold">Companion name</FormLabel>
                             <FormControl>
                                 <Input
                                     placeholder="Enter the companion name"
@@ -84,7 +84,7 @@ const CompanionForm = () => {
                     name="subject"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Subject</FormLabel>
+                            <FormLabel className="text-white font-bold">Subject</FormLabel>
                             <FormControl>
                                 <Select
                                     onValueChange={field.onChange}
@@ -116,7 +116,7 @@ const CompanionForm = () => {
                     name="topic"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>What should the companion help with?</FormLabel>
+                            <FormLabel  className="text-white font-bold">What should the companion help with?</FormLabel>
                             <FormControl>
                                 <Textarea
                                     placeholder="Ex. Derivates & Integrals"
@@ -134,7 +134,7 @@ const CompanionForm = () => {
                     name="voice"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Voice</FormLabel>
+                            <FormLabel  className="text-white font-bold">Voice</FormLabel>
                             <FormControl>
                                 <Select
                                     onValueChange={field.onChange}
@@ -165,7 +165,7 @@ const CompanionForm = () => {
                     name="style"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Style</FormLabel>
+                            <FormLabel className="text-white font-bold">Style</FormLabel>
                             <FormControl>
                                 <Select
                                     onValueChange={field.onChange}
@@ -197,7 +197,7 @@ const CompanionForm = () => {
                     name="duration"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Estimated session duration in minutes</FormLabel>
+                            <FormLabel className="text-white font-bold">Estimated session duration in minutes</FormLabel>
                             <FormControl>
                                 <Input
                                     type="number"
@@ -210,7 +210,7 @@ const CompanionForm = () => {
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className="w-full cursor-pointer">Build Your Companion</Button>
+                <Button type="submit" className="w-full bg-[#FE5933] cursor-pointer">Build Your Companion</Button>
             </form>
         </Form>
     )
