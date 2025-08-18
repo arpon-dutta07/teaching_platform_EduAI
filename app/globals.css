@@ -153,7 +153,29 @@ body {
   }
 
   .input {
-    @apply !border-black !bg-white focus-visible:!ring-0 focus-visible:!border-black !w-full;
+    @apply !border-black !bg-white focus-visible:!ring-0 focus-visible:!border-black !w-full !text-black;
+  }
+  
+  /* Form styling fixes */
+  [data-slot="form-label"] {
+    @apply text-black font-medium;
+  }
+  
+  [data-slot="form-message"] {
+    @apply text-red-600;
+  }
+  
+  /* Select component fixes */
+  [data-slot="select-trigger"] {
+    @apply text-black;
+  }
+  
+  [data-slot="select-content"] {
+    @apply bg-white text-black;
+  }
+  
+  [data-slot="select-item"] {
+    @apply text-black hover:bg-gray-100;
   }
   .rounded-border {
     @apply rounded-4xl border border-black;
